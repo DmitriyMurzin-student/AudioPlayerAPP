@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:onClick="stop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/gonefludd"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/doppio_one"
+            android:gravity="center"
+            android:text="Gone.Fludd"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/doppio_one"
+            android:gravity="center"
+            android:text="player"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/trackTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название трека"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ListViewTrack"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ListViewTrack"
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:textColor="@color/white" />
+
+    <SeekBar
+        android:id="@+id/volumeControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playButton" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp">
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="113dp"
+            android:layout_height="83dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="128dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:onClick="pause"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/pause"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="70dp"
+            app:iconTint="#04FF8F"
+            app:iconTintMode="multiply"
+            app:layout_constraintLeft_toRightOf="@id/playButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="113dp"
+            android:layout_height="83dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="128dp"
+            android:onClick="play"
+            app:backgroundTint="@color/black"
+            app:backgroundTintMode="multiply"
+            app:icon="@drawable/ic_action_name"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="70dp"
+            app:iconTint="#04FF8F"
+            app:iconTintMode="multiply"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/pauseButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="center"
+            android:onClick="next"
+            android:visible="false"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/next"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="70dp"
+            app:iconTint="#009552"
+            app:iconTintMode="multiply"
+            app:layout_constraintLeft_toRightOf="@id/playButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/next2"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="238dp"
+            android:gravity="center"
+            android:onClick="back"
+            android:visible="false"
+            app:backgroundTint="@color/black"
+            app:icon="@drawable/back"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="70dp"
+            app:iconTint="#009552"
+            app:iconTintMode="multiply"
+            app:layout_constraintLeft_toRightOf="@id/playButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+</LinearLayout>
